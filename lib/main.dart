@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         // Title of the app
         title: Text(
-          'Math Fun', // App title
+          'ARITHMETIC GAME', // App title
           style: TextStyle(fontSize: 24),
         ),
       ),
