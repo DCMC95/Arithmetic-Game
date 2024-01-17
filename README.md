@@ -1,5 +1,5 @@
 # ARITHMETIC GAME
-## CONTENTS
+## CONTENTS ~ ENGLISH
 1. [ABOUT](#ABOUT)
 2. [DESCRIPTION](#DESCRIPTION)
 3. [GAME CATEGORY](#GAME-CATEGORY)
@@ -122,8 +122,23 @@ During this assignment, I encountered many challenges, two of which are listed b
 1. Click: [Arithmetic Game](https://github.com/DCMC95/Arithmetic-Game), or go to: https://github.com/DCMC95/Arithmetic-Game
 2. Download or import the project
 3. Open with Visual Code
-4. To connect and play the game on your device, click [Device Set Up](https://docs.flutterflow.io/deploying-your-app/testing-your-app/testing-your-app), or go to: https://docs.flutterflow.io/deploying-your-app/testing-your-app/testing-your-app
-5. Enjoy the game!
+4. Open terminal
+5. Navigate to Project Directory
+   -	Change your working directory to the project `cd repository`, replace "repository" with the actual repository
+6. Install Dependancies
+   -	Run the following command to fetch and install the project dependencies `flutter pub get`
+7. Check Connected Devices
+   -	**RUNNING ON A PHYSICAL DEVICES**
+   		-	STEP 1: Ensure you have a device connected. You can check this by using `flutter devices`
+   		-	STEP 2: Run the following command to install and launch the app on your physical device `flutter run -d device_id`, replace "device_id" with the identifier of your physical device (e.g., flutter run -d 1ce0420416044f05)
+   -	**RUNNING ON AN EMULATOR**
+   		-	STEP 1: Ensure you have an emulator runnnig. You can check this by using `flutter emulators`
+   		-	STEP 2: Execute the following command to run the app on the chosen emulator `flutter run -d emulator_id`, replace "emulator_id" with the identifier of your emulator (e.g., flutter run -d Pixel_3a_API_30)
+8. Run the App
+   -	Execute the follwing command to run the app on the connected device or emulator `flutter run`
+9. Open the App
+   -	Once the build process is complete, the app should automatically launch on the connected device or emulator
+10. Enjoy the app!
 
 ## HOW TO PLAY
 ### START INSTRUCTIONS
