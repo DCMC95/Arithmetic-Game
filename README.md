@@ -192,20 +192,16 @@ Mi è stato assegnato il compito di creare la mia app usando Dart durante il mio
 Durante questo compito, ho affrontato molte sfide, due delle quali sono elencate di seguito.
 1. Ho avuto un problema con il database, il punteggio del giocatore non caricava, ho dovuto rifare la funzione di caricamento del database, utilizzando questo codice:
 
-```dart
-Future<void> loadData() async {
-  // Apri il box Hive con il tipo specificato (int) e assegnalo a _myBox
-  await Hive.openBox<int>('scores').then((box) {
-    _myBox = box;
-  });
-}
-```
+`Future<void> loadData() async {
+// Open the Hive box with the specified type (int) and assign it to _myBox
+      await Hive.openBox<int>('scores').then((box) {
+      _myBox = box;
+    });
+  }`
 
 2. Ho cercato di far visualizzare l'app solo in modalità portrait, ma il codice che ho usato ha reso l'app non funzionale, dopo un po' sono riuscito a risolvere il problema con questa riga di codice:
 
-```dart
-SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-```
+`  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);`
 
 ## CARATTERISTICHE
 ### CARATTERISTICHE ATTUALI
