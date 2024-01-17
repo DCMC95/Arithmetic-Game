@@ -160,3 +160,175 @@ As someone who, barely knew how to code in Flutter and Dart, when I started this
 [Official Dart Website](https://dart.dev/)
 
 _NOTE: I learnt from the references, but did everything myself_
+
+
+
+
+
+## CONTENUT0 ~ ITALIANO
+1. [PARLA DI](#PARLA-DI)  
+2. [DESCRIZIONE](#DESCRIZIONE)
+3. [CATEGORIA DEL GIOCO](#CATEGORIA-DEL-GIOCO)
+4. [SFIDE](#SFIDE)
+5. [CARATTERISTICHE](#CARATTERISTICHE)
+6. [CARATTERISTICHE ATTUALI](#CARATTERISTICHE-ATTUALI)
+7. [CARATTERISTICHE FUTURE](#CARATTERISTICHE-FUTURE)
+8. [INSTALLAZIONE](#INSTALLAZIONE)
+9. [COME GIOCARE](#COME-GIOCARE)
+10. [ISTRUZIONI DI AVVIO](#ISTRUZIONI-DI-AVVIO)
+11. [CONCLUSIONI](#CONCLUSIONI)
+12. [RIFERIMENTI](#RIFERIMENTI)
+
+## PARLA DI
+### DESCRIZIONE
+Mi è stato assegnato il compito di creare la mia app usando Dart durante il mio tempo all'Università, studiando Informatica. Ho scelto di creare "Il Gioco Aritmetico", un'app interattiva ed educativa per migliorare le tue abilità aritmetiche in un modo divertente e coinvolgente. Con una calcolatrice integrata e un quiz matematico dinamico, il gioco si adatta al tuo livello di competenza e ti sfida a migliorare nel tempo.
+
+#### CATEGORIA DEL GIOCO
+- Educativo
+- Quiz
+- Strumento
+
+### SFIDE
+Durante questo compito, ho affrontato molte sfide, due delle quali sono elencate di seguito.
+1. Ho avuto un problema con il database, il punteggio del giocatore non caricava, ho dovuto rifare la funzione di caricamento del database, utilizzando questo codice:
+
+```dart
+Future<void> loadData() async {
+  // Apri il box Hive con il tipo specificato (int) e assegnalo a _myBox
+  await Hive.openBox<int>('scores').then((box) {
+    _myBox = box;
+  });
+}
+```
+
+2. Ho cercato di far visualizzare l'app solo in modalità portrait, ma il codice che ho usato ha reso l'app non funzionale, dopo un po' sono riuscito a risolvere il problema con questa riga di codice:
+
+```dart
+SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+```
+
+## CARATTERISTICHE
+### CARATTERISTICHE ATTUALI
+* Funzionalità della Calcolatrice:
+
+	1. Accedi a una calcolatrice facile da usare direttamente dalla schermata principale.
+
+	2. Effettua rapidi calcoli aritmetici.
+
+* Quiz Matematico:
+
+	1. Partecipa a un quiz matematico interattivo con domande adatte al tuo livello di competenza.
+
+	2. un aumento graduale della difficoltà mentre rispondi correttamente alle domande.
+
+* Difficoltà Progressiva:
+
+	1. Il gioco si adatta intelligentemente alla difficoltà in base alle tue prestazioni.
+
+	2. Sfida te stesso con problemi più complessi man mano che padroneggi l'aritmetica di base.
+
+* Database Locale:
+
+	1. Tieni traccia dei tuoi punteggi con un database locale memorizzato sul tuo dispositivo.
+
+	2. Continua senza soluzione di continuità il tuo progresso sullo stesso dispositivo, misurando il tuo miglioramento.
+
+### CARATTERISTICHE FUTURE
+* Modalità Multigiocatore
+
+	1. Introduci una modalità multigiocatore in cui i giocatori possono competere tra loro in sfide matematiche in tempo reale.
+
+	2. Permetti ai giocatori di sfidare amici o avversari, promuovendo un senso di competizione e collaborazione.
+
+* Classifica
+
+	1. Implementa una classifica globale o locale per mostrare i migliori punteggi.
+
+	2. Consenti ai giocatori di confrontare i loro punteggi con gli altri e promuovi una competizione amichevole.
+
+* Sfide Giornaliere
+
+	1. Introduci sfide giornaliere con set di domande uniche e ricompense speciali per completarle.
+
+	2. Incoraggia l'interazione regolare offrendo bonus o potenziamenti per giorni consecutivi di gioco.
+
+* Tutorial Interattivi
+
+	1. Includi tutorial interattivi per ciascuna operazione aritmetica, aiutando i giocatori a capire i concetti e migliorare le loro abilità.
+
+	2. Offri suggerimenti o spiegazioni durante le domande del quiz per migliorare l'esperienza di apprendimento.
+
+* Suggerimenti Educativi
+
+	1. Fornisci suggerimenti educativi e analisi delle prestazioni per aiutare i giocatori a monitorare il loro progresso nel tempo.
+
+	2. Identifica aree di miglioramento e consiglia esercizi mirati.
+
+* Integrazione con gli Standard Educativi
+
+	1. Allinea le domande del quiz agli standard educativi, rendendo il gioco uno strumento prezioso per studenti ed educatori.
+
+	2. Fornisci rapporti su quanto bene i giocatori stanno raggiungendo specifici obiettivi di apprendimento.
+
+* Sfide ed Eventi In-App
+
+	1. Organizza sfide speciali o eventi in-app con ricompense a tempo limitato per mantenere il gioco fresco ed emozionante.
+
+	2. Celebra le festività o commemora traguardi con sfide a tema.
+
+* Sincronizzazione tra Dispositivi e Database Globale
+
+	1. Implementa un database globale basato su cloud che memorizza in modo sicuro profili e punteggi dei giocatori.
+
+	2. Consenti ai giocatori di creare account, consentendo la sincronizzazione tra dispositivi del loro progresso.
+
+	3. I giocatori possono passare senza soluzione di continuità tra dispositivi mantenendo punteggi, risultati e contenuti sbloccati.
+
+	4. Implementa meccanismi robusti di autenticazione per garantire la sicurezza e la privacy dei dati.
+
+	5. Fornisci un'opzione per il recupero degli account in caso di perdita o aggiornamento del dispositivo.
+
+## INSTALLAZIONE
+1. Clicca su: [Gioco Aritmetico](https://github.com/DCMC95/Arithmetic-Game), o vai su: https://github.com/DCMC95/
+
+Arithmetic-Game
+2. Scarica o importa il progetto
+3. Apri con Visual Code
+4. Apri il terminale
+5. Naviga nella directory del progetto
+   - Cambia la tua directory di lavoro al progetto `cd repository`, sostituisci "repository" con il repository effettivo
+6. Installa le dipendenze
+   - Esegui il seguente comando per recuperare e installare le dipendenze del progetto `flutter pub get`
+7. Controlla i dispositivi connessi
+   - **ESECUZIONE SU DISPOSITIVI FISICI**
+      - PASSO 1: Assicurati di avere un dispositivo connesso. Puoi verificare ciò usando `flutter devices`
+      - PASSO 2: Esegui il seguente comando per installare e avviare l'app sul tuo dispositivo fisico `flutter run -d device_id`, sostituisci "device_id" con l'identificatore del tuo dispositivo fisico (ad esempio, flutter run -d 1ce0420416044f05)
+   - **ESECUZIONE SU UN EMULATORE**
+      - PASSO 1: Assicurati di avere un emulatore in esecuzione. Puoi verificare ciò usando `flutter emulators`
+      - PASSO 2: Esegui il seguente comando per eseguire l'app sull'emulatore scelto `flutter run -d emulator_id`, sostituisci "emulator_id" con l'identificatore del tuo emulatore (ad esempio, flutter run -d Pixel_3a_API_30)
+8. Esegui l'app
+   - Esegui il comando seguente per eseguire l'app sul dispositivo o sull'emulatore connesso `flutter run`
+9. Apri l'app
+   - Una volta completato il processo di compilazione, l'app dovrebbe essere lanciata automaticamente sul dispositivo o sull'emulatore connesso
+10. Goditi l'app!
+
+## COME GIOCARE
+### ISTRUZIONI DI AVVIO
+1. Carica il gioco
+2. Clicca su 'Apri Calcolatrice' per fare i tuoi calcoli
+3. Clicca su 'Apri Quiz' per testare e migliorare le tue abilità aritmetiche e continuare il tuo progresso
+4. Buon divertimento!
+
+_NOTA: Non puoi caricare il gioco durante il gioco, solo prima_
+
+## CONCLUSIONI
+Come qualcuno che a malapena sapeva come programmare in Flutter e Dart quando ho iniziato questo compito, direi che ho fatto un buon lavoro. Ma, guardando indietro, mi sarebbe piaciuto rendere il mio codice molto più leggibile, oltre ad aggiungere tutte le 'CARATTERISTICHE FUTURE'.
+
+## RIFERIMENTI
+[Sito ufficiale del repository del pacchetto per app Dart e Flutter](https://pub.dev/)
+
+[Sito ufficiale di Flutter](https://flutter.dev/)
+
+[Sito ufficiale di Dart](https://dart.dev/)
+
+_NOTA: Ho imparato dai riferimenti, ma ho fatto tutto da solo_
