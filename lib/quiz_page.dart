@@ -113,7 +113,7 @@ class _QuizPageState extends State<QuizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Math Quiz'), // App bar title for the Quiz page
+        title: Text('Maths Quiz'), // App bar title for the Quiz page
       ),
       body: Center(
         child: Column(
